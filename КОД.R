@@ -31,4 +31,10 @@ View(H)
 
 save(D, file = "2.RData")
 
+H <- subset(F, AdmArea == "Центральный административный округ")
+T <- mean(H$TotalAmount) 
+M <- subset(H, TotalAmount > T)
+View(M)
+
+save(M, file = "3.RData")
 
